@@ -1,0 +1,107 @@
+-- Merging decision tree log ---
+manifest
+ADDED from E:\Gitp\yuntian1-CountBook\app\src\main\AndroidManifest.xml:2:1-26:12
+	package
+		ADDED from E:\Gitp\yuntian1-CountBook\app\src\main\AndroidManifest.xml:3:5-36
+		INJECTED from E:\Gitp\yuntian1-CountBook\app\src\main\AndroidManifest.xml
+		INJECTED from E:\Gitp\yuntian1-CountBook\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from E:\Gitp\yuntian1-CountBook\app\src\main\AndroidManifest.xml
+		INJECTED from E:\Gitp\yuntian1-CountBook\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from E:\Gitp\yuntian1-CountBook\app\src\main\AndroidManifest.xml:2:11-69
+	android:versionCode
+		INJECTED from E:\Gitp\yuntian1-CountBook\app\src\main\AndroidManifest.xml
+		INJECTED from E:\Gitp\yuntian1-CountBook\app\src\main\AndroidManifest.xml
+application
+ADDED from E:\Gitp\yuntian1-CountBook\app\src\main\AndroidManifest.xml:5:5-24:19
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\dingding\.android\build-cache\354765cf963107435707616f78a23d446576efcf\output\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:design:26.0.0-alpha1] C:\Users\dingding\.android\build-cache\10c39d4ef545dc334176443103b155db9788996d\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] C:\Users\dingding\.android\build-cache\e636eb286433b162662a8c374e33a78aa763d4f9\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] C:\Users\dingding\.android\build-cache\5cc1b302ca5c4b9d22ec0b4bf3df1ebf080dc35b\output\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] C:\Users\dingding\.android\build-cache\84581dd5ebe56927a9eb40cac58612c91121e765\output\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:transition:26.0.0-alpha1] C:\Users\dingding\.android\build-cache\a3c1f54d43a448ac2e409cf9a48f3d946ca8483a\output\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-v4:26.0.0-alpha1] C:\Users\dingding\.android\build-cache\58c75e6ce1f7d52bef967d34750adeaae3fdd257\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] C:\Users\dingding\.android\build-cache\2f32364251289c230b0c17c1df6b6854d022b756\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:26.0.0-alpha1] C:\Users\dingding\.android\build-cache\7398165413dc29916381a0998b7fce1707eccc2e\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] C:\Users\dingding\.android\build-cache\3f77fc60bf9c4c156ba213c627b63058ffbdd448\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] C:\Users\dingding\.android\build-cache\c7763efb89a275666c11205b0ce90864ac011a2d\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:26.0.0-alpha1] C:\Users\dingding\.android\build-cache\6dc4547fe3bfd06ea77dc0005e1ce6c0a2ea0b12\output\AndroidManifest.xml:29:5-20
+	android:label
+		ADDED from E:\Gitp\yuntian1-CountBook\app\src\main\AndroidManifest.xml:8:9-41
+	android:supportsRtl
+		ADDED from E:\Gitp\yuntian1-CountBook\app\src\main\AndroidManifest.xml:10:9-35
+	android:roundIcon
+		ADDED from E:\Gitp\yuntian1-CountBook\app\src\main\AndroidManifest.xml:9:9-54
+	android:allowBackup
+		ADDED from E:\Gitp\yuntian1-CountBook\app\src\main\AndroidManifest.xml:6:9-35
+	android:icon
+		ADDED from E:\Gitp\yuntian1-CountBook\app\src\main\AndroidManifest.xml:7:9-43
+	android:theme
+		ADDED from E:\Gitp\yuntian1-CountBook\app\src\main\AndroidManifest.xml:11:9-40
+activity#com.example.countbook.MainActivity
+ADDED from E:\Gitp\yuntian1-CountBook\app\src\main\AndroidManifest.xml:12:9-18:20
+	android:name
+		ADDED from E:\Gitp\yuntian1-CountBook\app\src\main\AndroidManifest.xml:12:19-47
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from E:\Gitp\yuntian1-CountBook\app\src\main\AndroidManifest.xml:13:13-17:29
+action#android.intent.action.MAIN
+ADDED from E:\Gitp\yuntian1-CountBook\app\src\main\AndroidManifest.xml:14:17-69
+	android:name
+		ADDED from E:\Gitp\yuntian1-CountBook\app\src\main\AndroidManifest.xml:14:25-66
+category#android.intent.category.LAUNCHER
+ADDED from E:\Gitp\yuntian1-CountBook\app\src\main\AndroidManifest.xml:16:17-77
+	android:name
+		ADDED from E:\Gitp\yuntian1-CountBook\app\src\main\AndroidManifest.xml:16:27-74
+activity#com.example.countbook.counter
+ADDED from E:\Gitp\yuntian1-CountBook\app\src\main\AndroidManifest.xml:19:9-45
+	android:name
+		ADDED from E:\Gitp\yuntian1-CountBook\app\src\main\AndroidManifest.xml:19:19-42
+activity#com.example.countbook.NewCounter
+ADDED from E:\Gitp\yuntian1-CountBook\app\src\main\AndroidManifest.xml:20:9-23:59
+	android:label
+		ADDED from E:\Gitp\yuntian1-CountBook\app\src\main\AndroidManifest.xml:22:13-63
+	android:theme
+		ADDED from E:\Gitp\yuntian1-CountBook\app\src\main\AndroidManifest.xml:23:13-56
+	android:name
+		ADDED from E:\Gitp\yuntian1-CountBook\app\src\main\AndroidManifest.xml:21:13-39
+uses-sdk
+INJECTED from E:\Gitp\yuntian1-CountBook\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\dingding\.android\build-cache\354765cf963107435707616f78a23d446576efcf\output\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:design:26.0.0-alpha1] C:\Users\dingding\.android\build-cache\10c39d4ef545dc334176443103b155db9788996d\output\AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] C:\Users\dingding\.android\build-cache\e636eb286433b162662a8c374e33a78aa763d4f9\output\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] C:\Users\dingding\.android\build-cache\5cc1b302ca5c4b9d22ec0b4bf3df1ebf080dc35b\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] C:\Users\dingding\.android\build-cache\84581dd5ebe56927a9eb40cac58612c91121e765\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:26.0.0-alpha1] C:\Users\dingding\.android\build-cache\1c14411da1301ffc0ff964360880d75cede56df2\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:26.0.0-alpha1] C:\Users\dingding\.android\build-cache\a3c1f54d43a448ac2e409cf9a48f3d946ca8483a\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:26.0.0-alpha1] C:\Users\dingding\.android\build-cache\58c75e6ce1f7d52bef967d34750adeaae3fdd257\output\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] C:\Users\dingding\.android\build-cache\2f32364251289c230b0c17c1df6b6854d022b756\output\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-fragment:26.0.0-alpha1] C:\Users\dingding\.android\build-cache\7398165413dc29916381a0998b7fce1707eccc2e\output\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] C:\Users\dingding\.android\build-cache\3f77fc60bf9c4c156ba213c627b63058ffbdd448\output\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] C:\Users\dingding\.android\build-cache\c7763efb89a275666c11205b0ce90864ac011a2d\output\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:26.0.0-alpha1] C:\Users\dingding\.android\build-cache\6dc4547fe3bfd06ea77dc0005e1ce6c0a2ea0b12\output\AndroidManifest.xml:21:5-23:58
+	tools:overrideLibrary
+		ADDED from [com.android.support:design:26.0.0-alpha1] C:\Users\dingding\.android\build-cache\10c39d4ef545dc334176443103b155db9788996d\output\AndroidManifest.xml:23:9-59
+	android:targetSdkVersion
+		INJECTED from E:\Gitp\yuntian1-CountBook\app\src\main\AndroidManifest.xml
+		INJECTED from E:\Gitp\yuntian1-CountBook\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from E:\Gitp\yuntian1-CountBook\app\src\main\AndroidManifest.xml
+		INJECTED from E:\Gitp\yuntian1-CountBook\app\src\main\AndroidManifest.xml
+meta-data#android.support.VERSION
+ADDED from [com.android.support:design:26.0.0-alpha1] C:\Users\dingding\.android\build-cache\10c39d4ef545dc334176443103b155db9788996d\output\AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] C:\Users\dingding\.android\build-cache\e636eb286433b162662a8c374e33a78aa763d4f9\output\AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] C:\Users\dingding\.android\build-cache\5cc1b302ca5c4b9d22ec0b4bf3df1ebf080dc35b\output\AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] C:\Users\dingding\.android\build-cache\84581dd5ebe56927a9eb40cac58612c91121e765\output\AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:recyclerview-v7:26.0.0-alpha1] C:\Users\dingding\.android\build-cache\1c14411da1301ffc0ff964360880d75cede56df2\output\AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:transition:26.0.0-alpha1] C:\Users\dingding\.android\build-cache\a3c1f54d43a448ac2e409cf9a48f3d946ca8483a\output\AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:support-v4:26.0.0-alpha1] C:\Users\dingding\.android\build-cache\58c75e6ce1f7d52bef967d34750adeaae3fdd257\output\AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] C:\Users\dingding\.android\build-cache\2f32364251289c230b0c17c1df6b6854d022b756\output\AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-fragment:26.0.0-alpha1] C:\Users\dingding\.android\build-cache\7398165413dc29916381a0998b7fce1707eccc2e\output\AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] C:\Users\dingding\.android\build-cache\3f77fc60bf9c4c156ba213c627b63058ffbdd448\output\AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] C:\Users\dingding\.android\build-cache\c7763efb89a275666c11205b0ce90864ac011a2d\output\AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-compat:26.0.0-alpha1] C:\Users\dingding\.android\build-cache\6dc4547fe3bfd06ea77dc0005e1ce6c0a2ea0b12\output\AndroidManifest.xml:25:5-27:41
+	android:value
+		ADDED from [com.android.support:design:26.0.0-alpha1] C:\Users\dingding\.android\build-cache\10c39d4ef545dc334176443103b155db9788996d\output\AndroidManifest.xml:27:9-38
+	android:name
+		ADDED from [com.android.support:design:26.0.0-alpha1] C:\Users\dingding\.android\build-cache\10c39d4ef545dc334176443103b155db9788996d\output\AndroidManifest.xml:26:9-47
