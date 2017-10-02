@@ -24,7 +24,7 @@ public class counterClass {
         this.name = name;
         this.comment = comment;
     }
-    public counterClass(String InitialCount,String name,String comment,Date date){
+    public counterClass(Date date,String InitialCount,String name,String comment){
         this.count = InitialCount;
         this.date = date;
         this.name = name;
@@ -33,7 +33,9 @@ public class counterClass {
 
     @Override
     public String toString() {
-        return date.toString() + "  " +"Name: " + name + "  " + "Value: " + count + "  " +"Comment: " +comment ;
+        return "Last modified "+date.toString() + "  " +"Name:" + name + "  " + "Value:" + count +
+                "  "
+                +"Comment:" +comment ;
     }
 
     public void setDate(Date date){

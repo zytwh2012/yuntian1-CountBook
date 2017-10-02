@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import java.lang.reflect.Array;
 
@@ -31,18 +32,25 @@ public class NewCounter extends AppCompatActivity {
 
     }
     public void passData(View view) {
+
         String nameString = nameText.getText().toString();
         String commentString = commentText.getText().toString();
         String valueInt = value.getText().toString();
 
-        Intent passDataIntent = new Intent(this, MainActivity.class);
+        if(valueInt.matches("[0-9]+")) {
+            if (Integer.valueOf(valueInt) >= 0) {
+                Intent passDataIntent = new Intent(this, MainActivity.class);
 
-        passDataIntent.putExtra("firstArgument",valueInt);
-        passDataIntent.putExtra("secondArgument",nameString);
-        passDataIntent.putExtra("thirdArgument",commentString);
+                passDataIntent.putExtra("firstArgument", valueInt);
+                passDataIntent.putExtra("secondArgument", nameString);
+                passDataIntent.putExtra("thirdArgument", commentString);
 
-        setResult(RESULT_OK, passDataIntent);
-        finish();
-        //startActivity(passDataIntent);
+                setResult(RESULT_OK, passDataIntent);
+                finish();
+            }
+        }
+        else{
+            Toast.makeText(this,"Invalid value entered", Toast.LENGTH_LONG).show();
+        }
     }
 }

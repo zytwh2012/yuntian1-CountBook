@@ -12,102 +12,168 @@
     android:layout_height="match_parent"
     tools:context="com.example.countbook.counter">
 
+    <TextView
+        android:id="@+id/initialValueTag"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginRight="36dp"
+        android:text="initialValue"
+        android:textColor="@android:color/background_dark"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/currentValueTag"
+        app:layout_constraintRight_toLeftOf="@+id/initialValue" />
+
+    <TextView
+        android:id="@+id/currentValueTag"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginRight="36dp"
+        android:text="currentValue"
+        android:textColor="@android:color/background_dark"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/commentTag"
+        app:layout_constraintRight_toLeftOf="@+id/currentValue" />
+
+    <TextView
+        android:id="@+id/commentTag"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="207dp"
+        android:layout_marginRight="36dp"
+        android:text="comment"
+        android:textColor="@android:color/background_dark"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/comment" />
+
     <Button
-        android:id="@+id/Increment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
+        android:id="@+id/increment"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
         android:text="Increment"
         android:textSize="18sp"
-        app:layout_constraintHorizontal_bias="0.157"
+        android:layout_marginLeft="32dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        tools:layout_editor_absoluteY="387dp" />
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/decrement" />
 
     <Button
-        android:id="@+id/Decrement"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
+        android:id="@+id/decrement"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
         android:text="Decrement"
         android:textSize="18sp"
-        app:layout_constraintHorizontal_bias="0.517"
-        app:layout_constraintLeft_toRightOf="@+id/Increment"
-        app:layout_constraintRight_toRightOf="parent"
-        tools:layout_editor_absoluteY="387dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="32dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
 
     <Button
-        android:id="@+id/Reset"
-        android:layout_width="126dp"
-        android:layout_height="43dp"
-        android:layout_marginBottom="16dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
+        android:id="@+id/reset"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
         android:text="Reset"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintHorizontal_bias="0.519"
-        app:layout_constraintRight_toLeftOf="@+id/DeleteCounter" />
+        android:layout_marginBottom="16dp"
+        android:layout_marginRight="32dp"
+        app:layout_constraintRight_toRightOf="parent" />
 
     <EditText
-        android:id="@+id/CurrentValue"
-        android:layout_width="292dp"
-        android:layout_height="39dp"
-        android:layout_marginRight="46dp"
+        android:id="@+id/name"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
         android:ems="10"
         android:inputType="number"
-        app:layout_constraintRight_toRightOf="parent"
-        tools:layout_editor_absoluteY="120dp"
-        android:layout_marginLeft="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="32dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintHorizontal_bias="1.0" />
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/date"
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
         android:id="@+id/initialValue"
-        android:layout_width="293dp"
-        android:layout_height="38dp"
-        android:layout_marginRight="45dp"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginRight="16dp"
         android:ems="10"
         android:inputType="number"
-        app:layout_constraintRight_toRightOf="parent"
-        tools:layout_editor_absoluteY="198dp" />
+        app:layout_constraintBottom_toTopOf="@+id/currentValue"
+        app:layout_constraintRight_toRightOf="parent" />
 
     <EditText
-        android:id="@+id/Comment"
-        android:layout_width="292dp"
-        android:layout_height="42dp"
-        android:layout_marginRight="46dp"
+        android:id="@+id/comment"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="207dp"
+        android:layout_marginRight="16dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
-        app:layout_constraintRight_toRightOf="parent"
-        tools:layout_editor_absoluteY="280dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
 
     <EditText
-        android:id="@+id/CounterName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:id="@+id/currentValue"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginRight="16dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintHorizontal_bias="0.502" />
+        app:layout_constraintBottom_toTopOf="@+id/comment"
+        app:layout_constraintRight_toRightOf="parent" />
 
     <Button
-        android:id="@+id/DeleteCounter"
-        android:layout_width="132dp"
-        android:layout_height="43dp"
+        android:id="@+id/deleteCounter"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
         android:layout_marginBottom="16dp"
-        android:layout_marginRight="33dp"
-        android:layout_marginTop="8dp"
-        android:text="Delete Counter"
+        android:layout_marginRight="32dp"
+        android:onClick="delete"
+        android:text="Delete"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/reset"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginRight="16dp"
+        android:textColor="@android:color/background_dark"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/initialValue"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/dateTag"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginRight="36dp"
+        android:text="Date"
+        android:textColor="@android:color/background_dark"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/initialValueTag"
+        app:layout_constraintRight_toLeftOf="@+id/date" />
+
+    <Button
+        android:id="@+id/save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="143dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:onClick="passData"
+        android:text="Save"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Decrement"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
 
 </android.support.constraint.ConstraintLayout>

@@ -11,10 +11,12 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
+
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -50,6 +52,18 @@ public class MainActivity extends AppCompatActivity {
         Button nukeButton = (Button) findViewById(R.id.deleteAll);
         currentCounterList = (ListView) findViewById(R.id.currentCounterList);
 
+        currentCounterList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent mainToCounter = new Intent(MainActivity.this, counter.class);
+                mainToCounter.putExtra("item",currentCounterList.getItemAtPosition
+                        (position).toString());
+                mainToCounter.putExtra("p",position);
+                startActivityForResult(mainToCounter, 2);
+            }
+        });
+
+
         nukeButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 counterList.clear();
@@ -58,16 +72,17 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
     protected void onStart() {
         // TODO Auto-generated method stub
         super.onStart();
         loadFromFile();
         adapter = new ArrayAdapter<counterClass>(this,
-                R.layout.list_item, counterList);
+                android.R.layout.simple_list_item_1, counterList);
         currentCounterList.setAdapter(adapter);
     }
 
-    public void addNewCounter(View view) {
+    protected void addNewCounter(View view) {
         Intent mainToNew = new Intent(this, NewCounter.class);
         startActivityForResult(mainToNew, 1);
     }
@@ -81,7 +96,27 @@ public class MainActivity extends AppCompatActivity {
                 String name = data.getStringExtra("secondArgument");
                 String comment = data.getStringExtra("thirdArgument");
 
-                counterList.add(new counterClass(initialValue,name,comment));
+                counterList.add(new counterClass(initialValue, name, comment));
+                adapter.notifyDataSetChanged();
+                saveInFile();
+            }
+        }
+        if (requestCode == 2) {
+            if (resultCode == RESULT_OK) {
+
+                String value = data.getStringExtra("secondArgument");
+                String name = data.getStringExtra("thirdArgument");
+                String comment = data.getStringExtra("forthArgument");
+                int position  = data.getIntExtra("p",0);
+
+                counterList.set(position,new counterClass(name,value, comment));
+                adapter.notifyDataSetChanged();
+                saveInFile();
+            }
+            else if(resultCode == -999){
+                int position  = data.getIntExtra("p",0);
+
+                counterList.remove(position);
                 adapter.notifyDataSetChanged();
                 saveInFile();
             }
@@ -95,17 +130,19 @@ public class MainActivity extends AppCompatActivity {
 
             Gson gson = new Gson();
 
-            Type listType = new TypeToken<ArrayList<counterClass>>(){}.getType();
+            Type listType = new TypeToken<ArrayList<counterClass>>() {
+            }.getType();
             counterList = gson.fromJson(in, listType);
 
         } catch (FileNotFoundException e) {
-             //TODO Auto-generated catch block
+            //TODO Auto-generated catch block
             counterList = new ArrayList<counterClass>();
         } /*catch (IOException e) {
             // TODO Auto-generated catch block
            throw new RuntimeException();
         }*/
     }
+
     private void saveInFile() {
         try {
             FileOutputStream fos = openFileOutput(FILENAME,
