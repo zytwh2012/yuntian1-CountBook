@@ -96,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
                 String name = data.getStringExtra("secondArgument");
                 String comment = data.getStringExtra("thirdArgument");
 
-                counterList.add(new counterClass(initialValue, name, comment));
+                counterList.add(new counterClass(initialValue,initialValue, name, comment));
                 adapter.notifyDataSetChanged();
                 saveInFile();
             }
@@ -104,12 +104,13 @@ public class MainActivity extends AppCompatActivity {
         if (requestCode == 2) {
             if (resultCode == RESULT_OK) {
 
+                String initialValue = data.getStringExtra("firstArgument");
                 String value = data.getStringExtra("secondArgument");
                 String name = data.getStringExtra("thirdArgument");
                 String comment = data.getStringExtra("forthArgument");
                 int position  = data.getIntExtra("p",0);
 
-                counterList.set(position,new counterClass(name,value, comment));
+                counterList.set(position,new counterClass(initialValue,value,name,comment));
                 adapter.notifyDataSetChanged();
                 saveInFile();
             }

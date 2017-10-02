@@ -14,55 +14,35 @@ import java.util.Date;
 
 public class counterClass {
     private String count;
+    private String initialCount;
     private Date date;
     private String name;
     private String comment;
 
-    public counterClass(String InitialCount,String name,String comment){
-        this.count = InitialCount;
+    public counterClass(String initialCount, String count, String name, String comment) {
+        this.initialCount = initialCount;
+        this.count = count;
         this.date = new Date();
         this.name = name;
         this.comment = comment;
     }
-    public counterClass(Date date,String InitialCount,String name,String comment){
-        this.count = InitialCount;
+
+    public counterClass(Date date, String initialCount, String count, String name, String comment) {
+        this.initialCount = initialCount;
+        this.count = count;
         this.date = date;
         this.name = name;
         this.comment = comment;
     }
+
 
     @Override
     public String toString() {
-        return "Last modified "+date.toString() + "  " +"Name:" + name + "  " + "Value:" + count +
-                "  "
-                +"Comment:" +comment ;
+        return "Last modified " + date.toString() + "  " + "Name:" + name + "  " +
+                "Initial Value:"+ initialCount + "  " + "Value:" +
+                count + "  " + "Comment:" + comment;
     }
 
-    public void setDate(Date date){
-        this.date = date;
-    }
-    public Date getDate(){
-        return date;
-    }
-
-    public void setCount(String count){
-        this.count = count;
-    }
-    public String getCount(){
-        return count;
-    }
-
-    public void setName(String name){
-        this.name = name;
-    }
-    public String getName(){
-        return name;
-    }
-
-    public void setComment(String comment){
-        this.comment = comment;
-    }
-    public String  getComment(){
-        return comment;
-    }
 }
+
+

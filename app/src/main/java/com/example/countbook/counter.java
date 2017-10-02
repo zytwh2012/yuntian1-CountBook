@@ -52,9 +52,9 @@ public class counter extends AppCompatActivity {
 
         dateStr = segments[0];
         nameStr= segments[1].split(":");
-        currentValueStr = segments[2].split(":");
         initialValueStr= segments[2].split(":");
-        commentStr = segments[3].split(":");
+        currentValueStr = segments[3].split(":");
+        commentStr = segments[4].split(":");
 
         dateText.setText(dateStr, TextView.BufferType.EDITABLE);
         nameText.setText(nameStr[1], TextView.BufferType.EDITABLE);
@@ -92,15 +92,15 @@ public class counter extends AppCompatActivity {
         String nameString = nameText.getText().toString();
         String commentString = commentText.getText().toString();
         String currentValueInt = currentValue.getText().toString();
-        String dateString = dateText.getText().toString();
+        String initialValueInt = initialValue.getText().toString();
 
         if(currentValueInt.matches("[0-9]+")) {
             if (Integer.valueOf(currentValueInt) >= 0) {
                 Intent passDataIntent = new Intent(this, MainActivity.class);
 
-                passDataIntent.putExtra("firstArgument", currentValueInt);
-                passDataIntent.putExtra("secondArgument", nameString);
-                passDataIntent.putExtra("thirdArgument", currentValueInt);
+                passDataIntent.putExtra("firstArgument", initialValueInt);
+                passDataIntent.putExtra("secondArgument", currentValueInt);
+                passDataIntent.putExtra("thirdArgument", nameString);
                 passDataIntent.putExtra("forthArgument", commentString);
                 passDataIntent.putExtra("p", position);
 
